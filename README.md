@@ -3,7 +3,7 @@ Tool for certifying local robustness in deep networks.
 
 ### Installation
 
-A Conda environment is included in the `fgp_environment.yml`. You can install the environment with the following command:
+A Conda environment is included in `fgp_environment.yml`. You can install the environment with the following command:
 
 ```
 conda env create -f fgp_environment.yml
@@ -31,7 +31,7 @@ The main routine for checking robustness is the `check` function in `robustness_
 * `lowerbound` : (default False) boolean flag selecting Algorithm 1 (False) or Algorithm 2 (True).
 * `keepgoing` : (default False) when True, uses the heuristic given in Section 3.3 for decreasing the number of `UNKNOWN` results by continuing to search the queue when a possible false-positive is found. This heuristic can only be used in Algorithm 1 (i.e., when `lowerbound` is False).
 * `batch_size` : (default 1) batch size for processing the queue. Setting to 10-100 for medium to large examples significantly speeds up Algorithm 1. This must be 1 for Algorithm 2 (i.e., when `lowerbound` is True).
-* `return_num_visited` : (optional) if set to True, Algorithm 1 will return a tuple containing the robustness result followed by the number of regions visited. Otherwise Algorithm 1 will return the robustness result only.
+* `return_num_visited` : (default False) if set to True, Algorithm 1 will return a tuple containing the robustness result followed by the number of regions visited. Otherwise Algorithm 1 will return the robustness result only.
 * `recap` : (default False) if set to True, the algorithm will print out a few statistics as it computes.
 * `debug_steps` : (default False) if set to True, the algorithm will print out more detailed statistics as it computes.
 * `debug_print_rate` : (default 1) if `debug_steps` is True, detailed information will be printed every `debug_print_rate` iterations of the algorithm.
