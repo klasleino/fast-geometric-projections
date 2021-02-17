@@ -1,7 +1,7 @@
 # fast-geometric-projections
 Tool for certifying local robustness in deep networks.
 
-This tool implements the algorithm described in the work, [Fast Geometric Projections for Local Robustness Certification](https://arxiv.org/pdf/2002.04742.pdf), appearing in ICLR 2021.
+This tool implements the algorithm described in the work, [Fast Geometric Projections for Local Robustness Certification](https://arxiv.org/pdf/2002.04742.pdf), appearing in ICLR 2021, and is maintained by the authors, Aymeric Fromherz, Klas Leino, Matt Fredrikson, Bryan Parno, and Corina Păsăreanu.
 
 If you use this tool, please use the following citation:
 ```bibtex
@@ -13,7 +13,7 @@ If you use this tool, please use the following citation:
 }
 ```
 
-## Installation
+# Installation
 
 Simply install via pip:
 ```
@@ -29,7 +29,7 @@ Alternatively, you can install from the source repository:
 pip install -e .
 ```
 
-## Checking Robustness
+# Checking Robustness
 
 The main routine for checking robustness is the `check` function in `fgp.certification`. This takes the following arguments:
 * `network` : the neural network to be certified. Must be an instance of `CheckableModel` (found in the `fgp.checkable_models` module).
@@ -44,7 +44,7 @@ The main routine for checking robustness is the `check` function in `fgp.certifi
 * `debug_steps` : (default False) if set to `True`, the algorithm will print out more detailed statistics as it computes.
 * `debug_print_rate` : (default 1) if `debug_steps` is True, detailed information will be printed every `debug_print_rate` iterations of the algorithm.
 
-### The `CheckableModel` Wrapper
+## The `CheckableModel` Wrapper
 
 The functionality required to compute projections to internal and decision boundaries is contained in the wrapper class, `CheckableModel`. 
 The `check` routine only functions on instances of `CheckableModel`.
@@ -67,8 +67,14 @@ network.compile_backprop('l2')
 network.compile_backprop('linf')
 ```
 
-### Examples
+## Examples
 
 An example script demonstrating the use of `check` can be found in `examples/scripts/evaluation_script.py`.
 This script can be called from the command line; an example usage can be found in `examples/scripts/example.sh`.
 A number of pre-trained weights for the models used in the paper are provided in `examples/models/`.
+
+
+# Main Contributers
+
+* Klas Leino
+* Aymeric Fromherz
