@@ -1,3 +1,1 @@
-tensorflow>=1.15
-datalib
-scriptify
+tensorflow==1.15
