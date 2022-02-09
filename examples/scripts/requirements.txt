@@ -1,4 +1,4 @@
-tensorflow-gpu==1.15
+tensorflow-gpu==2.5.3
 datalib-dev
 h5py==2.10.0
 scriptify
